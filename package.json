@@ -1,0 +1,47 @@
+{
+  "name": "FaceplantDeux",
+  "version": "0.0.1",
+  "author": "Brandon Satrom <bsatrom@gmail.com> (bsatrom.github.com)",
+  "description": "Electric Boogaloo",
+  "main": "",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bsatrom/FaceplantDeux.git"
+  },
+  "keywords": [
+    "demo",
+    "kendoui"
+  ],
+  "homepage": "http://bsatrom.github.com/FaceplantDeux",
+  "scripts": {
+    "start": "app.js"
+  },
+  "contributors": [
+    {
+      "name": "Brandon Satrom",
+      "email": "bsatrom@gmail.com"
+    }
+  ],
+  "dependencies": {
+    "express": "3.0.0",
+    "ejs": "*",
+    "underscore": "1.x.x",
+    "ejs-locals": "~0.2.5"
+  },
+  "devDependencies": {
+    "supervisor": ">= 0.5.0"
+  },
+  "engines": {
+    "node": ">=0.8"
+  },
+  "bugs": {
+    "url": "https://github.com/bsatrom/FaceplantDeux/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/bsatrom/FaceplantDeux/raw/master/LICENSE"
+    }
+  ],
+  "private": true
+}

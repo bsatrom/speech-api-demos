@@ -1,0 +1,47 @@
+<% layout('layout') -%>
+
+<div id="splash">
+	<section>
+		<h2 class="label label-green">The Buzz Page</h2>
+	</section>
+	<section>
+		<fieldset>
+			<legend>What's the latest Buzz?</legend>
+			<!-- "x-webkit-speech" attribute for the Speech Input API -->
+			<input id="query" type="search" accesskey="s" class="k-input k-textbox" speech x-webkit-speech /> 
+			<input id="search" class="k-button" type="button" value="Search" />
+			<input id="speak" class="k-button" type="button" value="Click to Speak" />
+			<input id="continuousMode" class="k-button" type="button" data-icon="play" value="Enable Continuous Mode" />
+			<div>
+				<ul id="altList">
+					<li>Did you mean... </li>
+				</ul> 
+			</div>
+			<div id="speechLogs">
+				<span id="log">Speech Logs... </span>
+			</div>
+			<div class="clear"></div>
+			<div class="tweets">
+			    <div id="list"></div>
+			</div>
+		</fieldset>
+		<div id="tweetPager" class="k-pager-wrap">
+		<div>
+	</section>
+</div>
+<div class="clearer">&nbsp;</div>
+
+<script type="text/x-kendo-tmpl" id="tweetTemplate">
+    <div class="tweet">
+        <a class="t-link" href="http://www.twitter.com/${from_user}" title="${from_user}"><img width="48" height="48" src="${profile_image_url}" alt="${from_user}" /></a>
+        <p>${text}</p>
+    </div>
+</script>
+
+<script type="text/x-kendo-tmpl" id="altTemplate">
+	<li>
+		<a id="#: alternative #">"#: alternative#" (#= confidence#%)</a>
+	</li>
+</script>
+
+<% block("scripts", "<script src='javascripts/buzz.js'></script>") -%>

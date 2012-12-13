@@ -1,0 +1,73 @@
+<% layout('layout') -%>
+
+<nav id="sub">
+	<ul class="tabbed">
+		<li class="current-tab"><a href="#">Create a Speaker</a></li>
+		<li><a href="#">Find a Speaker</a></li>
+		<li><a href="#">Popular Speakers</a></li>
+		<li><a href="#">Why Join?</a></li>
+	</ul>		
+	<div class="clearer">&nbsp;</div>
+</nav>
+<div id="splash">
+	<section>
+		<h2 class="label label-green">Create Speaker Profile</h2>
+	</section>
+	<section id="speakerForm">
+		<fieldset>
+			<legend>Basic Info</legend>
+			<ul>
+				<li>
+					<!-- (kd1) Add accesskey to name -->
+					<label for="name">Name:</label>  
+					<input id="name" type="text" accesskey="n" placeholder="ex. Hugo Reyes" class="k-input k-textbox" /> 
+				</li>
+				<li>
+					<label for="email">Email:</label>  
+					<input id="email" type="email" placeholder="ex. hugo@dharma.com" class="k-input k-textbox" />
+				</li>
+				<li>
+					<label for="twitter">Twitter:</label>  
+					<input id="twitter" type="text" placeholder="ex. hugoDHARMA" class="k-input k-textbox" /> 
+				</li>
+				<li>
+					<label for="blog">Url:</label> 
+					<input id="blog" type="url" placeholder="ex. www.dharmadaily.com" class="k-input k-textbox" /> 
+				</li>
+				<li>
+					<!-- (kd2) Add accesskey to birthday -->
+					<label for="birthday">Birthday:</label>   
+					<input id="birthday" accesskey="b" type="date" />
+				</li>
+				<li>
+					<label for="preferredSessionTime">Preferred Session Time:</label>  
+					<input id="preferredSessionTime" type="time" />
+				</li>
+			</ul>
+		</fieldset>
+		<fieldset>
+			<legend>Bio &amp; Photo</legend>
+			<ul>
+				<li>
+					<label for="languages">Favorite Language:</label>   
+					<input id="languages" type="text" />
+				</li>
+				<li>
+					<label for="photo">Photo:</label> 
+					<input id="photo" type="file" class="k-input" /> 
+				</li>
+				<li>
+					<label for="bio">Bio:</label>
+					<textarea id="bio" rows="10" cols="50"></textarea> 
+				</li>
+			</ul>					
+		</fieldset>
+		<input type="button" value="Save" class="k-button" />
+		<input type="button" value="Reset" class="k-button" />
+		<!-- (kd7) Add RTL Button -->
+		<input type="button" id="toggleRTL" value="Activate RTL Support" class="k-button" />
+	</section>
+</div>
+<div class="clearer">&nbsp;</div>
+
+<% block("scripts", "<script src='javascripts/speaker/profile.js'></script>") -%>

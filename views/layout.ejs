@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset='utf-8' />
+		<title><%= title %></title>
+		<meta name="description" content="A simple website for interacting with speakers during their talks" />
+		<meta name="keywords" content="faceplant, speaking, social" />
+		<meta name="author" content="Brandon Satrom" />
+		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+		<link rel='stylesheet' href='/stylesheets/style.css' />
+		<link rel='stylesheet' href='/stylesheets/kendo.common.min.css'  />
+		<link rel='stylesheet' href='/stylesheets/kendo.metro.min.css'  />
+		
+	</head>
+	<body>
+		<div id="teaser"></div>
+		<div id="site-wrapper">
+			<header>
+				<div id="top">
+					<hgroup class="left">
+						<h1><a href="/"><img src="/images/QuoteFaces.png" id="siteLogo" alt="Logo" /></a></h1>
+          </hgroup>
+        </div>
+        <nav id="main" class="left">
+					<ul class="tabbed">
+						<li>
+							<a href="/">Home</a>
+						</li>
+						<li>
+							<a href="/sessions">Sessions</a>
+						</li>
+						<li > 
+							<a href="/speakers">Speakers</a>
+						</li>
+						<li class="current-tab">
+							<a href="/buzz">Buzz</a>
+						</li>
+						<li>
+							<a href="/account">Sign Up!</a>
+						</li>
+					</ul>
+					<div class="clearer">&nbsp;</div>
+				</nav>
+				<div class="clearer">&nbsp;</div>
+			</header>		
+			<div id="notice"></div>
+			<%- body %>
+			<footer>
+				<div id="footer-left" class="left">
+					<img src="/images/logo-small.png" alt="Small Logo" class="left"/>
+					<p>&copy; 2009-2011 Carrot Pants Studios. All rights Reserved.</p>
+					<p class="quiet">
+						<a href="http://templates.arcsin.se/">Website template</a> by <a href="http://arcsin.se/">Arcsin</a>
+					</p>
+					<div class="clearer">&nbsp;</div>
+				</div>
+				<div id="footer-right" class="right">
+					<p class="large">
+						<a href="/">Home </a>
+						<span class="text-separator"> | </span>
+						<a href="/sessions">Sessions </a>
+						<span class="text-separator"> | </span>
+						<a href="/speakers">Speakers </a>
+						<span class="text-separator"> | </span>
+						<a href="/buzz"> Buzz </a>
+						<span class="text-separator"> | </span>
+						<a href="/account">Sign Up! </a>
+						<span class="text-separator"> | </span>
+						<a href="#top" class="quiet">Page Top &uarr; </a>
+					<p>
+				</div>
+				<div class="clearer">&nbsp;</div>
+			</footer>
+			<script src="/javascripts/jquery.min.js"></script>
+			<script src="/javascripts/kendo.all.min.js"></script>
+			<%- blocks.scripts %>
+		</div>
+	</body>
+</html>
