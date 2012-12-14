@@ -895,7 +895,7 @@ ul#altList li {
 	float: left;
 }
 
-ul#altList li a, #speechLogs span {
+ul#altList li, ul#altList li a, #speechLogs span {
 	font-size: 14pt;
 	color: #7EA700;
 	font-style: italic;

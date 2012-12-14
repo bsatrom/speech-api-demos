@@ -39,7 +39,9 @@
 			len,
 			tmpl;
 
-		query.val(topResult.transcript); // SpeechRecognitionAlternative
+		// Apply the transcript to the speech search input and 
+		// trigger its click event
+		query.val(topResult.transcript); 
 		search.click();
 		speak.val("Click to Speak");
 
@@ -53,8 +55,11 @@
 			});
 		}
 
+		// Show the alternative results list
 		list.append(alts).fadeIn("slow");
 
+		// When an alternative result is clicked, apply its value
+		// to the search input and trigger the click event
 		list.find('a').on('click', function(e) {
 			e.stopPropagation();
 			var id = e.currentTarget.id;
@@ -207,7 +212,7 @@
 			data: "results",
 			total: "results_per_page"
 		},
-		pageSize: 4
+		pageSize: 5
 	});
 
 	tweetPager.kendoPager({
